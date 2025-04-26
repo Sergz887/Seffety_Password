@@ -1,0 +1,23 @@
+Случайная статья в Википедии – в этом проекте приложение выдает случайную 
+ссылку на статью Википедии. Программа уточняет у пользователя отобразить 
+ли случайную статью в Википедии и при положительном ответе выводит страницу.
+
+
+markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton("Cоздать ещё пароль")
+        markup.row(btn1)
+        bot.send_message(message.chat.id, f'{message.from_user.first_name}, Ваш пароль для {message.text} - {psw}', reply_markup=markup)
+
+
+if message.text in open(str(message.from_user.id) + '.txt').read():
+            bot.reply_to(message, 'Этот пароль уже был создан')
+
+
+    elif message.text.lower() in open(str(message.from_user.id) + '.txt').read():
+            bot.reply_to(message, 'Этот пароль уже был создан для данного сервиса')
+
+
+spnb_style.configure('.',
+                         background = "#595959",
+                         foreground="white",
+                         )
